@@ -4,7 +4,6 @@ base_locale: en
 locales: [en]
 
 ignore_unused:
-  - "decidim.components.custom_registration_form.name"
 
 ignore_missing:
-  - decidim.participatory_processes.scopes.global
+

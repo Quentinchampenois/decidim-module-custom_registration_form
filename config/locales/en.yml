@@ -1,6 +1,2 @@
 ---
 en:
-  decidim:
-    components:
-      custom_registration_form:
-        name: CustomRegistrationForm
