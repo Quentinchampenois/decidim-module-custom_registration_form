@@ -9,12 +9,12 @@ Gem::Specification.new do |s|
   s.authors = ["quentinchampenois"]
   s.email = ["26109239+Quentinchampenois@users.noreply.github.com"]
   s.license = "AGPL-3.0"
-  s.homepage = "https://github.com/decidim/decidim-module-custom_registration_form"
+  s.homepage = "https://github.com/opensourcepolitics/decidim-module-custom_registration_form"
   s.required_ruby_version = ">= 2.7"
 
   s.name = "decidim-custom_registration_form"
-  s.summary = "A decidim custom_registration_form module"
-  s.description = "Customize the user registration form of your platform direclty from your Decidim's backoffice."
+  s.summary = "A Decidim module to customize the registration form"
+  s.description = "Customize the user registration form of your Decidim platform directly from the backoffice."
 
   s.files = Dir["{app,config,lib}/**/*", "LICENSE-AGPLv3.txt", "Rakefile", "README.md"]
 
