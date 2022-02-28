@@ -5,7 +5,7 @@ require "decidim/core"
 
 module Decidim
   module CustomRegistrationForm
-    # This is the engine that runs on the public interface of custom_registration_form.
+    # This is the engine that runs on the public interface of custom registration form.
     class Engine < ::Rails::Engine
       isolate_namespace Decidim::CustomRegistrationForm
 

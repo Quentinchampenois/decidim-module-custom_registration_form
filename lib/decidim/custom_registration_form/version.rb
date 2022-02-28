@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 module Decidim
-  # This holds the decidim-meetings version.
+  # This holds the module versions.
   module CustomRegistrationForm
     def self.version
-      "0.26.0"
+      "0.0.1"
     end
 
     def self.decidim_compatibility_version
