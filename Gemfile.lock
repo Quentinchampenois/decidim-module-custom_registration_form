@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    decidim-custom_registration_form (0.26.0)
+    decidim-custom_registration_form (0.0.1)
       decidim-admin (= 0.26.0)
       decidim-core (= 0.26.0)
 
