@@ -12,8 +12,8 @@ ruby RUBY_VERSION
 gem "decidim", Decidim::CustomRegistrationForm.decidim_compatibility_version
 gem "decidim-custom_registration_form", path: "."
 
-gem "puma", ">= 4.3"
 gem "bootsnap", "~> 1.4"
+gem "puma", ">= 4.3"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -24,6 +24,7 @@ group :development do
   gem "faker", "~> 2.14"
   gem "letter_opener_web", "~> 1.3"
   gem "listen", "~> 3.1"
+  gem "rubocop-faker"
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 4.0"
