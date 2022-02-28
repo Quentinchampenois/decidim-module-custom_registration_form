@@ -2,6 +2,8 @@
 
 Thanks to this module, you will be able to customize your user registration form (`/users/sign_up`) easily directly from the backoffice.
 
+:construction: At the moment, the module is still under development. Please do not use it in production since it isn't ready to use. We will communicate once the module is ready :construction:
+
 ## Requirements
 
 * Decidim instance - `>= v0.26.0`
