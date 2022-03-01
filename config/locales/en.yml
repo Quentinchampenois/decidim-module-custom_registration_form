@@ -1,2 +1,8 @@
 ---
 en:
+  decidim:
+    admin:
+      titles:
+        custom_registration_form: Customize the registration form
+      menu:
+        custom_registration_form: Custom registration form
