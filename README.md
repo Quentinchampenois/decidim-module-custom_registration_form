@@ -32,6 +32,9 @@ bundle
 Don't hesitate to contribute to the Decidim's project, see [Decidim](https://github.com/decidim/decidim) !
 
 Also, if you found bug, issue or have feature suggestion, don't hesitate to share with us on this repository, thanks !
+If you want to contribute, you are welcome, please refer to the [contributing guide](./docs/CONTRIBUTING.md) !
+
+For any security vulnerability question or other, please refer to the [security guide](./docs/SECURITY.md)
 
 ## License
 
