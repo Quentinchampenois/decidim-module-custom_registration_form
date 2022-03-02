@@ -9,6 +9,17 @@ module Decidim
       # Note that it inherits from `Decidim::Admin::BaseController`, which
       # override its layout and provide all kinds of useful methods.
       class ApplicationController < Decidim::Admin::ApplicationController
+        def permission_class_chain
+          [::Decidim::CustomRegistrationForm::Admin::Permissions] + super
+        end
+
+        def user_not_authorized_path
+          decidim.root_path
+        end
+
+        def user_has_no_permission_path
+          decidim.root_path
+        end
       end
     end
   end

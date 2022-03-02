@@ -4,7 +4,13 @@ module Decidim
   module CustomRegistrationForm
     module Admin
       class CustomRegistrationFormController < CustomRegistrationForm::Admin::ApplicationController
-        def index; end
+        before_action :authorized?
+
+        private
+
+        def authorized?
+          enforce_permission_to :read, :custom_registration_form
+        end
       end
     end
   end
