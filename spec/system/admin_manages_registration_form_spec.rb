@@ -19,5 +19,12 @@ describe "Admin manages registration form", type: :system do
     it "displays main content block" do
       expect(page).to have_content("Customize the registration form")
     end
+
+    it "allow user to activate custom field" do
+      within "#custom_registration_form" do
+        expect(page).to have_content("Custom registration form enabled")
+      end
+      expect(page).to have_content("Save")
+    end
   end
 end

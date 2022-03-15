@@ -4,6 +4,6 @@ base_locale: en
 locales: [en]
 
 ignore_unused:
-
+  - decidim.admin.menu.custom_registration_form
 ignore_missing:
 

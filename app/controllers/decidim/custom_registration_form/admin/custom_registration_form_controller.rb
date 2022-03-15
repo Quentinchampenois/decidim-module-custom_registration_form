@@ -6,6 +6,10 @@ module Decidim
       class CustomRegistrationFormController < CustomRegistrationForm::Admin::ApplicationController
         before_action :authorized?
 
+        def index
+          @form = Decidim::CustomRegistrationForm::Admin::RegistrationForm.new
+        end
+
         private
 
         def authorized?
