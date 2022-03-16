@@ -7,7 +7,7 @@ module Decidim
         before_action :authorized?
 
         def index
-          @form = Decidim::CustomRegistrationForm::Admin::RegistrationForm.new
+          @registration_form = Decidim::CustomRegistrationForm::Admin::RegistrationForm.new
         end
 
         private
