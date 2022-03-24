@@ -1,0 +1,14 @@
+<% form = context.fetch(:form, nil) %>
+<% name = context.fetch(:name, :gender) %>
+
+<% if form.present? %>
+  <div class="card__content">
+    <h3><%= t(".title") %></h3>
+    <div class="field">
+      <% gender.each_with_index do |val, idx| %>
+        <%= radio_button_tag(name, idx) %>
+        <%= label_tag("#{name.to_s}_#{val.to_s}".to_sym, val.to_s) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -18,6 +18,20 @@ module Decidim
       initializer "CustomRegistrationForm.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)
       end
+
+      initializer "CustomRegistrationForm.signup_content_blocks" do
+        Decidim.content_blocks.register(:signup_form, :gender) do |content_block|
+          content_block.cell = "decidim/custom_registration_form/content_blocks/signup_form/gender"
+          content_block.public_name_key = "decidim.custom_registration_form.content_blocks.signup_form.gender.name"
+          content_block.settings_form_cell = "decidim/custom_registration_form/content_blocks/signup_form/gender_settings_form"
+
+          content_block.settings do |settings|
+            settings.attribute :gender, type: :integer
+          end
+
+          content_block.default!
+        end
+      end
     end
   end
 end

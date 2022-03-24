@@ -1,0 +1,12 @@
+<div class="card" id="custom_registration">
+  <div class="card__content">
+    <h3><%= t(".custom_registration_form.title") %></h3>
+    <p><%= t(".custom_registration_form.description") %></p>
+
+    <% Decidim::ContentBlock.published.for_scope(:signup_form, organization: current_organization).each do |content_block| %>
+      <% next unless content_block.manifest %>
+
+      <%= cell content_block.manifest.cell, content_block, context: { form: form, name: content_block.manifest.name } %>
+    <% end %>
+  </div>
+</div>

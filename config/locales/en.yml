@@ -6,3 +6,15 @@ en:
         custom_registration_form: Custom registration form
       titles:
         custom_registration_form: Customize the registration form
+    custom_registration_form:
+      content_blocks:
+        signup_form:
+          gender:
+            name: Gender
+            title: Select your gender
+    devise:
+      registrations:
+        custom_registration_form:
+          custom_registration_form:
+            description: See below more fields
+            title: Extra registration form fields
