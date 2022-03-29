@@ -5,5 +5,8 @@ locales: [en]
 
 ignore_unused:
   - decidim.admin.menu.custom_registration_form
+  - decidim.custom_registration_form.content_blocks.signup_form.gender.name
 ignore_missing:
-
+  - decidim.devise.registrations.*
+  - devise.registrations.new.sign_up
+  - decidim.content_blocks.html.html_content
