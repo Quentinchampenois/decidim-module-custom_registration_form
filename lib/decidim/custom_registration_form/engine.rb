@@ -36,6 +36,11 @@ module Decidim
           content_block.default!
         end
       end
+
+      config.to_prepare do
+        # Extend organization model
+        Decidim::Organization.include(Decidim::CustomRegistrationForm::OrganizationExtend)
+      end
     end
   end
 end

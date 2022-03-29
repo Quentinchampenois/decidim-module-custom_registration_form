@@ -72,8 +72,9 @@
             </div>
           </div>
 
-          <%= render "custom_registration_form", form: f %>
-
+          <% if current_organization.registration_form_enabled? %>
+            <%= render "custom_registration_form", form: f %>
+          <% end %>
           <div class="card" id="card__newsletter">
             <div class="card__content">
               <h3><%= t(".newsletter_title") %></h3>
