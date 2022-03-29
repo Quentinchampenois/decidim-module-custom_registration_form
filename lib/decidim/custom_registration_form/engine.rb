@@ -19,6 +19,10 @@ module Decidim
         Decidim.register_assets_path File.expand_path("app/packs", root)
       end
 
+      initializer "CustomRegistrationForm.add_cells_view_paths" do
+        Cell::ViewModel.view_paths << File.expand_path("#{Decidim::CustomRegistrationForm::Engine.root}/app/cells")
+      end
+
       initializer "CustomRegistrationForm.signup_content_blocks" do
         Decidim.content_blocks.register(:signup_form, :gender) do |content_block|
           content_block.cell = "decidim/custom_registration_form/content_blocks/signup_form/gender"
