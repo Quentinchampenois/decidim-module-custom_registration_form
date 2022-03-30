@@ -10,7 +10,8 @@ module Decidim
       paths["lib/tasks"] = nil
 
       routes do
-        root to: "custom_registration_form#index"
+        resource :custom_registration_form, only: [:edit, :update], controller: "custom_registration_form"
+        root to: "custom_registration_form#edit"
       end
 
       def load_seed

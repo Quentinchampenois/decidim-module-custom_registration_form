@@ -11,7 +11,7 @@ en:
         custom_registration_form:
           registration_form:
             custom_registration_form_enabled: Enable custom registration form in organization
-          index:
+          edit:
             title: Custom registration form
             registration_form:
               description: Define extra fields in the registration form of your current organization. New fields added will be displayed only if the registration form is enabled on the current organization.

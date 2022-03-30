@@ -6,7 +6,7 @@ module Decidim
       class RegistrationForm < Form
         attribute :custom_registration_form_enabled, Boolean
 
-        validates :custom_registration_form_enabled, presence: true, inclusion: { in: [true, false] }
+        validates :custom_registration_form_enabled, inclusion: { in: [true, false] }
       end
     end
   end
