@@ -20,9 +20,26 @@
           <%= render partial: "decidim/custom_registration_form/admin/custom_registration_form/registration_form", locals: { form: f } %>
         </div>
       </div>
-      <div class="button--double form-general-submit">
-        <%= f.submit "Save" %>
-      </div>
     <% end %>
+
+    <div class="card">
+      <div class="card-divider">
+        <h2 class="card-title"><%= t(".custom_fields.title") %></h2>
+      </div>
+      <div class="card-section">
+        <% Decidim.content_blocks.for(:signup_form).each do |content_block| %>
+          <div class="flex">
+            <p><%= content_block.name %></p>
+            <div class="switch">
+              <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+              <label class="switch-paddle" for="exampleSwitch">
+                <span class="show-for-sr">Download Kittens</span>
+              </label>
+            </div>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

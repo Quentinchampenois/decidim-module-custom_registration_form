@@ -10,6 +10,7 @@ module Decidim
           enforce_permission_to :read, :custom_registration_form
 
           @registration_form = form(RegistrationForm).from_model(current_organization)
+          @custom_fields_form = RegistrationForm.new
         end
 
         def update
