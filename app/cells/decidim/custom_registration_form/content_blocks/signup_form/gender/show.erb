@@ -1,14 +1,11 @@
-<% form = context.fetch(:form, nil) %>
 <% name = context.fetch(:name, :gender) %>
 
-<% if form.present? %>
-  <div class="card__content">
-    <h3><%= t("decidim.custom_registration_form.content_blocks.signup_form.gender.title") %></h3>
-    <div class="field">
-      <% gender.each_with_index do |val, idx| %>
-        <%= radio_button_tag(name, idx) %>
-        <%= label_tag("#{name.to_s}_#{val.to_s}".to_sym, val.to_s) %>
-      <% end %>
-    </div>
+<div class="card__content">
+  <h3><%= t("decidim.custom_registration_form.content_blocks.signup_form.gender.title") %></h3>
+  <div class="field">
+    <% gender.each_with_index do |val, idx| %>
+      <%= radio_button_tag("user[#{name.to_s}]", idx) %>
+      <%= label_tag("#{name.to_s}_#{idx}".to_sym, val.to_s) %>
+    <% end %>
   </div>
-<% end %>
+</div>
