@@ -38,9 +38,9 @@ module Decidim
       end
 
       config.to_prepare do
-        # Extend organization model
         Decidim::Organization.include(Decidim::CustomRegistrationForm::OrganizationExtend)
         Decidim::RegistrationForm.include(Decidim::CustomRegistrationForm::RegistrationFormExtend)
+        Decidim::CreateRegistration.include(Decidim::CustomRegistrationForm::CreateRegistrationExtend)
       end
     end
   end

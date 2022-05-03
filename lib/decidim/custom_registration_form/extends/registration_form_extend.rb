@@ -8,7 +8,7 @@ module Decidim
       included do
         attribute :gender, String
 
-        validates :gender, presence: true
+        validates :gender, presence: true, if: -> { gender.present? }
       end
     end
   end
