@@ -15,17 +15,6 @@ describe "Registration", type: :system do
   let!(:terms_and_conditions_page) { Decidim::StaticPage.find_by(slug: "terms-and-conditions", organization: organization) }
 
   before do
-    Decidim::ContentBlock.create(
-      decidim_organization_id: organization.id,
-      weight: 1,
-      scope_name: "signup_form",
-      images: {},
-      manifest_name: "gender",
-      published_at: Time.zone.now,
-      settings: nil,
-      scoped_resource_id: nil
-    )
-
     switch_to_host(organization.host)
     visit decidim.new_user_registration_path
   end
@@ -113,9 +102,31 @@ describe "Registration", type: :system do
   describe "when registration form is enabled" do
     let!(:organization) { create(:organization, :custom_registration_form_enabled) }
 
-    it "display registration form block" do
-      expect(page).to have_content("Extra registration form fields")
-      expect(page).to have_content("Select your gender")
+    it "doesn't display registration form block" do
+      expect(page).not_to have_content("Extra registration form fields")
+    end
+
+    context "and there is custom content blocks" do
+      before do
+        Decidim::ContentBlock.create(
+          decidim_organization_id: organization.id,
+          weight: 1,
+          scope_name: "signup_form",
+          images: {},
+          manifest_name: "gender",
+          published_at: Time.zone.now,
+          settings: nil,
+          scoped_resource_id: nil
+        )
+
+        switch_to_host(organization.host)
+        visit decidim.new_user_registration_path
+      end
+
+      it "display registration form block" do
+        expect(page).to have_content("Extra registration form fields")
+        expect(page).to have_content("Select your gender")
+      end
     end
   end
 end
