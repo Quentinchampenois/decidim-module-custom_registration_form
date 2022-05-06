@@ -4,7 +4,7 @@
   <h3><%= t("decidim.custom_registration_form.content_blocks.signup_form.gender.title") %></h3>
   <div class="field">
     <% gender.each_with_index do |val, idx| %>
-      <%= radio_button_tag("user[#{name.to_s}]", idx) %>
+      <%= radio_button_tag("user[#{name.to_s}]", val.to_s) %>
       <%= label_tag("#{name.to_s}_#{idx}".to_sym, val.to_s) %>
     <% end %>
   </div>
